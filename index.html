@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Manager — Todo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <header class="header">
+        <div class="logo">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="0" y="0" width="24" height="24" rx="6" fill="#EEF2FF"></rect>
+            <path d="M6 12l3 3 9-9" stroke="#5B21B6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="title-block">
+          <h1>Task Manager</h1>
+          <p class="subtitle">Organize your day, one task at a time</p>
+        </div>
+      </header>
+
+      <section class="todo-card">
+
+        <div class="input-row">
+          <input id="taskInput" type="text" placeholder="What needs to be done?" />
+          <button id="addBtn" class="add-btn">+ Add</button>
+        </div>
+
+        <div class="input-row" style="margin-top:-6px;">
+          <button id="randomBtn" class="add-btn" style="background:#5b21b6;">+ Random</button>
+        </div>
+
+        <div class="filters-row">
+          <div class="filters">
+            <button data-filter="all" class="filter active">All</button>
+            <button data-filter="active" class="filter">Active</button>
+            <button data-filter="completed" class="filter">Completed</button>
+          </div>
+          <div class="counter" id="counter">0 of 0 tasks</div>
+        </div>
+
+        <ul id="tasksList" class="tasks-list"></ul>
+
+        <div id="emptyState" class="empty">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+            <rect x="0" y="0" width="24" height="24" rx="6" fill="#F8FAFC"></rect>
+            <path d="M8 12l2 2 6-6" stroke="#94A3B8" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>No tasks yet. Add one to get started!</p>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
